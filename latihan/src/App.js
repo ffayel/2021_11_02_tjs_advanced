@@ -1,8 +1,12 @@
 import React from 'react';
+import ViewLogin from './components/view/ViewLogin'
 
 function App() {
   return (
-    <React.Fragment>LATIHAN</React.Fragment>
+    <React.Fragment>
+      LATIHAN
+      <ViewLogin></ViewLogin>
+    </React.Fragment>
   );
 }
 

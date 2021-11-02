@@ -10,7 +10,7 @@
     8.1.0
 
 * Ajout des templates : 
-`npm i -g create-react-app create-react-component create-react-library`
+`npm i -g create-react-app create-react-component create-react-library generate-react-cli`
 
 * Creation de l'application :  `create-react-app latihan`
 * Ajout d'un serveur de mock : 
@@ -28,5 +28,18 @@
 
 * Dev tools : > ... / moreTools / `performance monitoring` : DOM NODES and style recalcs per s
 
+* plugin material icon Theme : `PKief.material-icon-theme` (permet un ux de vscode plus detaillé)
 
-## 
+## Creation d'une application : Back-end vente
+
+préparation scafolder de composant : `generate-react-cli`
+mise en place du 'generate-react-cli.json'
+
+creation de la première page (Login): 
+    
+    npx generate-react-cli component ViewDashboard ViewLogin ViewStock --type=view
+    npx generate-react-cli component BaseCard BaseInput BaseButton BaseGraph BaseMenu --type=base
+    npx generate-react-cli component LayoutDefault LayoutFooter LayoutHeader LayoutContent --type=layout
+    npx generate-react-cli component FeatureLogin FeatureIncidentTIckets FeatureOrders FeatureProducts FeatureSales FeatureStockOverview --type=feature
+
+Ajout de la dépendance : `npm i prop-types`

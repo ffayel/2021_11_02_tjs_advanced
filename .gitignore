@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+mock-api/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+mock-api/build
+
+# misc
+mock-api/.DS_Store
+mock-api/.env.local
+mock-api/.env.development.local
+mock-api/.env.test.local
+mock-api/.env.production.local
+
+mock-api/npm-debug.log*
+mock-api/yarn-debug.log*
+mock-api/yarn-error.log*

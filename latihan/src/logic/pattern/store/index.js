@@ -1,5 +1,6 @@
 import {createStore} from 'redux';
 import ActionTypes from '../actions/action-types';
+import { devToolsEnhancer } from 'redux-devtools-extension';
 
 // Déplacer le state
 const applicationState /* initial state */ = {
@@ -28,7 +29,12 @@ const reducer /* state presenter*/ = (state, action) => {
   }
 }
 
-const store = createStore(reducer, applicationState);
+const store = createStore( 
+    reducer, 
+    applicationState,
+    /** Middleware */
+    devToolsEnhancer()
+    );
 
 /*
 store.dispatch(action)

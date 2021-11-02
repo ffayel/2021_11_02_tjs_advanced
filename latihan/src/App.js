@@ -12,6 +12,12 @@ function App() {
   return (
     <React.Fragment>
       LATIHAN
+      <button onClick={ 
+          () => store.dispatch(
+            {type:ActionTypes.USER_CONNECTION_REQUEST ,payload:null}
+            )}>
+              click
+            </button>
       <ViewLogin></ViewLogin>
     </React.Fragment>
   );

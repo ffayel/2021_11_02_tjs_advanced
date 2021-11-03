@@ -59,3 +59,8 @@ ajout dans chrome les reduc devtools : https://chrome.google.com/webstore/detail
 * react-virtualized : chargement dynamic (http://bvaughn.github.io/react-virtualized/#/components/Grid)
 * Docs en ligne : https://devdocs.io/
 * point entrée pour de la veille techno: https://awesome.re/ ou recherche google préfixer de awesome
+
+
+## Ajout d'une librairie de composant
+
+    npm install semantic-ui-react semantic-ui-css

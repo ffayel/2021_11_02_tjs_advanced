@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import {BaseButton} from '../../base'
 
 
 const ViewLogin = () => (
@@ -9,6 +10,7 @@ const ViewLogin = () => (
     <Helmet>
       <title>Login page</title>
     </Helmet>
+    <BaseButton onClick={()=>alert(132)}>Click Me</BaseButton>
     ViewLogin Component
   </div>
 );

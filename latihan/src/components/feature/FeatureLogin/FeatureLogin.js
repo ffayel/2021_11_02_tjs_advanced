@@ -2,6 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './FeatureLogin.css';
 import { BaseButton, BaseInput } from '../../base';
+import { useGlobalEvent } from '../../hooks/use-global-event';
 
 const FeatureLogin = () => {
 
@@ -14,6 +15,9 @@ const FeatureLogin = () => {
     setCredentials({ ...credentials, ...{ [val]: e.target.value } })
   }
 
+  useGlobalEvent('click', e => console.warn('Global Click', e));
+  useGlobalEvent('keydown', e => console.warn('Global Click', e));
+  /*
   //lifecycle
   useEffect(
     function initial (){ 
@@ -27,8 +31,9 @@ const FeatureLogin = () => {
         window.removeEventListener('click', globalListener );
       }
     }
-  , [/* shouldcomponentUpdate : conditions de rédelcancehement de l'effet */] )
-
+    // shouldcomponentUpdate : conditions de rédeclenchement de l'effet
+  , [] )
+*/
 
   return (
   <div className="FeatureLogin" data-testid="FeatureLogin">

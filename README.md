@@ -64,3 +64,37 @@ ajout dans chrome les reduc devtools : https://chrome.google.com/webstore/detail
 ## Ajout d'une librairie de composant
 
     npm install semantic-ui-react semantic-ui-css
+
+
+## Event Delegation 
+cas de plusieur Event listener creer pour rien : 
+
+    // this.clickHandler = this.clickHandler.bind(this)
+    clickHandler = evt => {
+        console.log(evt.target,this)
+    }
+
+    render(){
+        return (
+        <React.Fragment>
+            <div>
+            <BaseButton onClick={ this.clickHandler }>A</BaseButton>
+            <BaseButton onClick={ this.clickHandler }>B</BaseButton>
+            <BaseButton onClick={ () => this.clickHandler() }>C</BaseButton>
+            </div>
+
+meilleur implementation : 
+
+    // this.clickHandler = this.clickHandler.bind(this)
+    clickHandler = evt => {
+        console.log(evt.target,this)
+    }
+
+    render(){
+        return (
+        <React.Fragment>
+            <div onClick={ this.clickHandler }>
+            <BaseButton>A</BaseButton>
+            <BaseButton>B</BaseButton>
+            <BaseButton>C</BaseButton>
+            </div>

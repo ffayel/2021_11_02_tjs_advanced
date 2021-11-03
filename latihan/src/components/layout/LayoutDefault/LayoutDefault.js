@@ -1,10 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './LayoutDefault.css';
+import LayoutFooter from '../LayoutFooter/LayoutFooter'
+import LayoutHeader from '../LayoutHeader/LayoutHeader'
+import LayoutContent from '../LayoutContent/LayoutContent'
 
-const LayoutDefault = () => (
+const LayoutDefault = (props) => (
   <div className="LayoutDefault">
-    LayoutDefault Component
+    <LayoutHeader></LayoutHeader>
+    <LayoutContent>
+      {props.children}
+    </LayoutContent>
+    <LayoutFooter></LayoutFooter>
   </div>
 );
 

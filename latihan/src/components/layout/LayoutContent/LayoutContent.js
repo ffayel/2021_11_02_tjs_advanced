@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './LayoutContent.css';
 
-const LayoutContent = () => (
+const LayoutContent = (props) => (
   <div className="LayoutContent">
-    LayoutContent Component
+    {props.children}
   </div>
 );
 

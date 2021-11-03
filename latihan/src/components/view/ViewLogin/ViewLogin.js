@@ -2,17 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import {BaseButton} from '../../base'
+import {LayoutDefault} from '../../layout/'
+import FeatureLogin from '../../feature/FeatureLogin'
 
 
 const ViewLogin = () => (
-  <div>
-    {/* A déplacer */}
-    <Helmet>
-      <title>Login page</title>
-    </Helmet>
-    <BaseButton onClick={()=>alert(132)}>Click Me</BaseButton>
-    ViewLogin Component
-  </div>
+  <LayoutDefault>
+  <FeatureLogin></FeatureLogin>
+</LayoutDefault>
 );
 
 ViewLogin.propTypes = {};

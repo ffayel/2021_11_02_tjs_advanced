@@ -30,6 +30,9 @@
 
 * plugin material icon Theme : `PKief.material-icon-theme` (permet un ux de vscode plus detaillé)
 
+* S.O.L.I.D : 
+![](https://devopedia.org/images/article/177/8101.1558682601.png)
+
 ## Creation d'une application : Back-end vente
 
 préparation scafolder de composant : `generate-react-cli`
@@ -43,3 +46,16 @@ creation de la première page (Login):
     npx generate-react-cli component FeatureLogin FeatureIncidentTIckets FeatureOrders FeatureProducts FeatureSales FeatureStockOverview --type=feature
 
 Ajout de la dépendance : `npm i prop-types`
+
+Install de redux : `npm i redux`
+
+Install : `npm i redux-devtools-extension`
+ajout dans chrome les reduc devtools : https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=fr
+
+
+## Lib utile : 
+
+* react-helmet
+* react-virtualized : chargement dynamic (http://bvaughn.github.io/react-virtualized/#/components/Grid)
+* Docs en ligne : https://devdocs.io/
+* point entrée pour de la veille techno: https://awesome.re/ ou recherche google préfixer de awesome

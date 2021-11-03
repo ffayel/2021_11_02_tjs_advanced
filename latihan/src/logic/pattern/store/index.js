@@ -22,7 +22,7 @@ const reducer /* state presenter*/ = (state, action) => {
   switch (action.type) {
 
   case ActionTypes.APP_INITIALIZED:
-    return { ...state };
+    return {...state, env:{...state.env, voiceActive:true} };
 
   default:
     return state; 

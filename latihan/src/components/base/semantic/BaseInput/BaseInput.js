@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import './BaseInput.css';
 
 import { Input } from 'semantic-ui-react'
-const BaseInput = ({ label, placeholder, value, onChange}) => (
+// correspondance a React.memo /  React.PureComponent
+const BaseInput = React.memo( ({ label, placeholder, value, onChange}) => (
   <>
   { 
     value !== null 
@@ -22,7 +23,7 @@ const BaseInput = ({ label, placeholder, value, onChange}) => (
   }
 
   </>
-);
+));
 
 BaseInput.propTypes = {
   label: PropTypes.string, 

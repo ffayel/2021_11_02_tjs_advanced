@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './LayoutHeader.css';
 
-const LayoutHeader = () => (
+const LayoutHeader = (props) => (
   <div className="LayoutHeader">
-    LayoutHeader Component
+     <h1>LATIHAN</h1>
+    <h2>{props.children}</h2>
   </div>
 );
 

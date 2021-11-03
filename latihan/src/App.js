@@ -11,7 +11,6 @@ store.dispatch({type: ActionTypes.APP_INITIALIZED, payload:null});
 function App() {
   return (
     <React.Fragment>
-      LATIHAN
       <ViewLogin></ViewLogin>
     </React.Fragment>
   );

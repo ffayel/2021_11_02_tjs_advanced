@@ -1,1 +1,10 @@
-.LayoutHeader {}
+.LayoutHeader {
+    padding:15px;
+    min-height:10vh;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.LayoutHeader h1, .LayoutHeader h2{
+    margin: 0;
+}

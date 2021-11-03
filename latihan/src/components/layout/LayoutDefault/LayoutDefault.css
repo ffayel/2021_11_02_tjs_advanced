@@ -1,1 +1,11 @@
-.LayoutDefault {}
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.LayoutDefault {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}

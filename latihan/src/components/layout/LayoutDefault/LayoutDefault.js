@@ -1,22 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 import './LayoutDefault.css';
-import LayoutFooter from '../LayoutFooter/LayoutFooter'
+
 import LayoutHeader from '../LayoutHeader/LayoutHeader'
 import LayoutContent from '../LayoutContent/LayoutContent'
+import LayoutFooter from '../LayoutFooter/LayoutFooter'
 
 const LayoutDefault = (props) => (
   <div className="LayoutDefault">
-    <LayoutHeader></LayoutHeader>
+    <Helmet>
+      <title>{props.title}</title>
+    </Helmet>
+    <LayoutHeader>
+      {props.title}
+    </LayoutHeader>
     <LayoutContent>
-      {props.children}
+      {props.menu}
+      {props.features}
     </LayoutContent>
     <LayoutFooter></LayoutFooter>
   </div>
 );
 
-LayoutDefault.propTypes = {};
+LayoutDefault.propTypes = {
+  title: PropTypes.string,
+  menu: PropTypes.elementType,
+  header: PropTypes.elementType,
+  footer: PropTypes.elementType,
+  features: PropTypes.any/*.oneOfType([
+    PropTypes.elementType,
+    PropTypes.arrayOf(PropTypes.elementType),
+  ])*/
+};
 
-LayoutDefault.defaultProps = {};
+LayoutDefault.defaultProps = {
+  title: 'Default Page Title'
+
+};
 
 export default LayoutDefault;

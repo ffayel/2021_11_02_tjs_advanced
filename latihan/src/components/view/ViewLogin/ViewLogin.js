@@ -7,9 +7,12 @@ import FeatureLogin from '../../feature/FeatureLogin'
 
 
 const ViewLogin = () => (
-  <LayoutDefault>
-  <FeatureLogin></FeatureLogin>
-</LayoutDefault>
+  <LayoutDefault 
+    title="View Login"
+    menu={null}
+    header={null} 
+    footer={null}
+    features={<FeatureLogin/>} />
 );
 
 ViewLogin.propTypes = {};

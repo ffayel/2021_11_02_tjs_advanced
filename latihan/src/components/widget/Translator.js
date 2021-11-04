@@ -1,6 +1,7 @@
 
 import React from 'react';
 // import {default as React } from 'react';
+import lodash from 'lodash'
 
 const translate = async (sourceText, targetLang = 'ms') => {
     if(!sourceText) throw Error("Invalid sourceText");
@@ -30,15 +31,18 @@ const translate = async (sourceText, targetLang = 'ms') => {
 
 }
 
+const debouncedTranslate = lodash.debounce(
+    (text, target, cb) => translate(text, target).then(cb)
+, 300);
+
+
 export const Translator = React.memo(({children:text, target = 'fr'}) => {
     
     const [translation, setTranslation] = React.useState('Translating...');
 
     React.useEffect(
-        ()=>{
-            if(text){
-                translate(text,target).then( setTranslation );
-            }
+        () => {
+            if(text) debouncedTranslate(text,target, setTranslation );
         }
     ,[text, target])
 

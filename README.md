@@ -31,7 +31,7 @@
 * plugin material icon Theme : `PKief.material-icon-theme` (permet un ux de vscode plus detaillé)
 
 * S.O.L.I.D : 
-![](https://devopedia.org/images/article/177/8101.1558682601.png)
+![SOLID IMAGE](https://devopedia.org/images/article/177/8101.1558682601.png)
 
 ## Creation d'une application : Back-end vente
 
@@ -60,6 +60,7 @@ ajout dans chrome les reduc devtools : https://chrome.google.com/webstore/detail
 * Docs en ligne : https://devdocs.io/
 * point entrée pour de la veille techno: https://awesome.re/ ou recherche google préfixer de awesome
 * fonction utilitaire logic : https://lodash.com/
+* Axios : librairy utilitaire pour les utlisation de fetch/XmlHttpRequest : https://axios-http.com/
 
 
 ## Ajout d'une librairie de composant
@@ -129,3 +130,14 @@ meilleur implementation :
 cette stratégie permet une optimisation les performances nos applications
 
 https://lodash.com/
+
+    npm i lodash
+
+
+## Redux and reduc middelwares
+
+![](https://azamsharp.com/images/redux-flow.gif)
+
+> ajout de 'redux-observable' 
+
+    npm install redux-observable rxjs

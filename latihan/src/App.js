@@ -16,7 +16,7 @@ console.log(process.env)
 console.log(`%c END Env`,'font-size:15px;color:green;')
 
 const backendMessages = request.init(env.REACT_APP_BACKEND + '/message');
-console.log(`%c Messages:`,'font-size:15px;color:green;')
+console.log(`%c Messages:`,'font-size:15px;color:blue;')
 backendMessages.get().then(console.table)
 
 /*
@@ -46,7 +46,7 @@ class App extends React.Component {
     this.timer = setInterval( () => this.tick(), 1000);
   }
 
-  getSnapshotBeforeUpdate(){}
+//  getSnapshotBeforeUpdate(){}
   componentDidUpdate(){}
 
   //doit etre mis a jours si retourne true
@@ -62,8 +62,8 @@ class App extends React.Component {
   render(){
     return (
       <React.Fragment>
-        <h1>{this.time}</h1>
         <ViewLogin></ViewLogin>
+        <h1>{this.time}</h1>
       </React.Fragment>
     );
   }

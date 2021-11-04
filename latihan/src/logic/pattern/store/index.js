@@ -1,6 +1,10 @@
-import {createStore} from 'redux';
+import {applyMiddleware, createStore} from 'redux';
 import ActionTypes from '../actions/action-types';
-import { devToolsEnhancer } from 'redux-devtools-extension';
+import { createEpicMiddleware} from 'redux-observable';
+import { composeWithDevTools, devToolsEnhancer } from 'redux-devtools-extension';
+
+import { logger } from '../middlewares/logger';
+import { userMiddleware } from '../middlewares/user.middleware';
 
 // Déplacer le state
 const applicationState /* initial state */ = {
@@ -29,17 +33,26 @@ const reducer /* state presenter*/ = (state, action) => {
   }
 }
 
+const actionMiddelware = createEpicMiddleware();
+
 const store = createStore( 
     reducer, 
     applicationState,
     /** Middleware */
-    devToolsEnhancer()
-    );
+    /* devToolsEnhancer() */
+    composeWithDevTools(
+      applyMiddleware(
+          logger
+          , actionMiddelware
+      )
+    )
+);
 
 /*
 store.dispatch(action)
 store.getState()
 store.subscribe()
 */
+actionMiddelware.run(userMiddleware);
 
 export default store;

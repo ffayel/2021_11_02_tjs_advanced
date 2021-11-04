@@ -4,7 +4,7 @@ import './LayoutHeader.css';
 
 const LayoutHeader = (props) => (
   <div className="LayoutHeader">
-     <h1>LATIHAN</h1>
+    <h1>LATIHAN</h1>
     <h2>{props.children}</h2>
   </div>
 );

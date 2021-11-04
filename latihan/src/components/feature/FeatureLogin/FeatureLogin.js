@@ -4,6 +4,8 @@ import './FeatureLogin.css';
 import { BaseButton, BaseInput } from '../../base';
 import { useGlobalEvent } from '../../hooks/use-global-event';
 import { Translator } from '../../widget/Translator';
+import store from '../../../logic/pattern/store';
+import ActionTypes from '../../../logic/pattern/actions/action-types';
 
 const FeatureLogin = () => {
 
@@ -17,7 +19,14 @@ const FeatureLogin = () => {
   }
 
   //useGlobalEvent('click', e => console.warn('Global Click', e));
-  //useGlobalEvent('keydown', e => console.warn('Global Click', e));
+/*  useGlobalEvent('keydown', e => {
+    console.warn('keydown', e);
+    store.dispatch({type:ActionTypes.USER_CONNECTION_REQUEST , payload:e.key})
+  });
+*/
+
+const clickHandler = e => store.dispatch({type:ActionTypes.USER_CONNECTION_REQUEST , payload:credentials})
+
   /*
   //lifecycle
   useEffect(
@@ -48,7 +57,7 @@ const FeatureLogin = () => {
       />
       <Translator target="es">{credentials.username}</Translator>
       {/* <BaseInput label="uncontrolado" value={null}></BaseInput> */}
-      <BaseButton></BaseButton>
+      <BaseButton onClick={clickHandler}></BaseButton>
   </div>
   )
 };

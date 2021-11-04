@@ -61,6 +61,9 @@ ajout dans chrome les reduc devtools : https://chrome.google.com/webstore/detail
 * point entrée pour de la veille techno: https://awesome.re/ ou recherche google préfixer de awesome
 * fonction utilitaire logic : https://lodash.com/
 * Axios : librairy utilitaire pour les utlisation de fetch/XmlHttpRequest : https://axios-http.com/
+* https://nextjs.org/
+* react-inject-env : REACT_APP_BACKEND=http:://dfsdklfsjdfklsdf npx react-inject-env set
+* npx npkill (fidage total)
 
 
 ## Ajout d'une librairie de composant

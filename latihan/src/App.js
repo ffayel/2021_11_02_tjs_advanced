@@ -3,11 +3,26 @@ import ViewLogin from './components/view/ViewLogin'
 
 import store from './logic/pattern/store'
 import ActionTypes from './logic/pattern/actions/action-types';
+import {env} from './env';
 
+
+import { request } from './logic/services/technical';
+
+
+
+console.log(`%c Env:`,'font-size:15px;color:green;')
+console.log(env)
+console.log(process.env)
+console.log(`%c END Env`,'font-size:15px;color:green;')
+
+const backendMessages = request.init(env.REACT_APP_BACKEND + '/message');
+console.log(`%c Messages:`,'font-size:15px;color:green;')
+backendMessages.get().then(console.table)
+
+/*
 store.subscribe(()=> console.log(store.getState()));
 store.dispatch({type: ActionTypes.APP_INITIALIZED, payload:null});
-
-
+*/
 
 class App extends React.Component {
 
@@ -17,7 +32,7 @@ class App extends React.Component {
 
   tick(){
     this.time = Date.now();
-    console.log(this.time);
+    //console.log(this.time);
     this.setState({});
   }
 

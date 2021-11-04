@@ -1,0 +1,75 @@
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import './FeatureLogin.css';
+
+import {
+  BaseButton,
+  // eslint-disable-next-line no-unused-vars
+  BaseInput
+} from '../../base'
+
+const FeatureLogin = () => {
+
+  const [credentials, setCredentials] = React.useState(
+    { username: '', password: '' }
+  );
+
+
+  const inputChangeHandler = val => { 
+    // console.log('Doing the lifting work')
+    return e => {
+    setCredentials({ ...credentials, ...{ [val]: e.target.value } })
+    }
+  }
+
+  /*
+  //lifecycle
+  useEffect(
+    function initial (){ 
+      // componenDidMount : A faire à la montée du composant
+      const globalListener = e => console.warn('Global Click')
+
+      window.addEventListener('click', globalListener );
+
+      return function cleanup(){
+      // componenWillUnMount : A faire lorsques que le composant est démonté
+        window.removeEventListener('click', globalListener );
+      }
+    }
+  , 
+  //  shouldcomponentUpdate : conditions de rédeclenchement de l'effet 
+  [] )
+  */
+
+  /* function inputChangeHandler(val){
+    return function (e){
+      setCredentials( {...credentials, ...{ [val]:e.target.value} })
+    }
+  } */
+
+
+  return (
+    <div className="FeatureLogin" data-testid="FeatureLogin">
+
+      <BaseInput
+        label="Username"
+        value={credentials.username}
+        onChange={React.useCallback(inputChangeHandler('username'))}
+      />
+      <BaseInput
+        label="Password"
+        value={credentials.password}
+        onChange={React.useMemo(()=>inputChangeHandler('password'))}
+      />
+      {/* <BaseInput label="uncontrolado" value={null}></BaseInput> */}
+      <hr />
+      <BaseButton>Connect</BaseButton>
+    </div>
+  )
+};
+
+FeatureLogin.propTypes = {};
+
+FeatureLogin.defaultProps = {};
+
+export default FeatureLogin;

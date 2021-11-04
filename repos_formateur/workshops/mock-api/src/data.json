@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Redux Observable"
+    },
+    {
+      "username": "bill",
+      "password": "baroud",
+      "id": 2
+    },
+    {
+      "username": "a",
+      "password": "b",
+      "id": 3
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "text": "Hello"
+    },
+    {
+      "id": 2,
+      "text": "World"
+    }
+  ],
+  "credentials": []
+}

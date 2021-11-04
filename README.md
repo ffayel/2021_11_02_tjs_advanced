@@ -98,3 +98,24 @@ meilleur implementation :
             <BaseButton>B</BaseButton>
             <BaseButton>C</BaseButton>
             </div>
+
+## Principe de memoization avec cache
+    
+> exemple de code de memoization equivalant a ce que fait useMemo(), la avec un cache
+
+    // Function Memoized
+    function process(param){
+        // First Run Cahce Creation
+        process.cache = process.cache || {}
+        // Calculation Bailout
+        if(process.cache[param]) return process.cache[param];
+        
+        console.log('Processing value', param);
+        // Actual Logic Code Here
+        const result = param * param;
+        process.cache[param] = result;
+        return result;
+    }
+
+    process(10) //  console.log('Processing value', param); 100
+    process(10) // 100

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './FeatureLogin.css';
 import { BaseButton, BaseInput } from '../../base';
 import { useGlobalEvent } from '../../hooks/use-global-event';
+import { Translator } from '../../widget/Translator';
 
 const FeatureLogin = () => {
 
@@ -45,6 +46,7 @@ const FeatureLogin = () => {
         label="Password" 
         value={credentials.password} onChange={inputChangeHandler('password')} 
       />
+      <Translator target="es">{credentials.username}</Translator>
       {/* <BaseInput label="uncontrolado" value={null}></BaseInput> */}
       <BaseButton></BaseButton>
   </div>

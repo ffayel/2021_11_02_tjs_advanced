@@ -10,5 +10,10 @@
             "text": "World"
         }
     ],
-    "credentials": []
+    "credentials": [],
+    "translate": [
+        {"key": "Hello",
+            "value":"Holla"
+        }
+    ]
 }

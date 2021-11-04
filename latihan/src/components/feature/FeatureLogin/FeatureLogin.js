@@ -16,8 +16,8 @@ const FeatureLogin = () => {
     setCredentials({ ...credentials, ...{ [val]: e.target.value } })
   }
 
-  useGlobalEvent('click', e => console.warn('Global Click', e));
-  useGlobalEvent('keydown', e => console.warn('Global Click', e));
+  //useGlobalEvent('click', e => console.warn('Global Click', e));
+  //useGlobalEvent('keydown', e => console.warn('Global Click', e));
   /*
   //lifecycle
   useEffect(
